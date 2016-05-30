@@ -11,7 +11,7 @@ source:
   sha256: d435f21b6f74ba42669e390d43a3b6ab401ec3a9420e7fb13d7971a7a71c3c0e
 
 build:
-  number: 1
+  number: 2
   skip: true   # [win]
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - cmake
   run:
     - boost 1.60.*
-    - hdf5 1.8.15*
+    - hdf5 1.8.17*
     - netcdf-cxx4
 
 test:
