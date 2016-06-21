@@ -17,10 +17,10 @@ build:
 requirements:
   build:
     - cmake
-    - boost 1.61.*
+    - boost 1.60.*
     - netcdf-cxx4 4.3.*
   run:
-    - boost 1.61.*
+    - boost 1.60.*
     - netcdf-cxx4 4.3.*
 
 test:
@@ -34,7 +34,7 @@ test:
 about:
   home: http://meteo-ubonn.github.io/radolan/
   license: MIT
-  summary:  C++ library for reading and working with the RADOLAN data format of the German Weather Service (DWD)
+  summary: C++ library for reading and working with the RADOLAN data format of the German Weather Service (DWD)
 
 extra:
   recipe-maintainers:
