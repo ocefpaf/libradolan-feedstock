@@ -16,13 +16,12 @@ build:
 
 requirements:
   build:
-    - boost 1.60.*
-    - netcdf-cxx4
     - cmake
+    - boost 1.61.*
+    - netcdf-cxx4 4.3.*
   run:
-    - boost 1.60.*
-    - hdf5 1.8.17*
-    - netcdf-cxx4
+    - boost 1.61.*
+    - netcdf-cxx4 4.3.*
 
 test:
   commands:
