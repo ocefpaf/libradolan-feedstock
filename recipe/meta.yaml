@@ -19,6 +19,7 @@ requirements:
     - cmake
     - boost 1.60.*
     - netcdf-cxx4 4.3.*
+    - toolchain
   run:
     - boost 1.60.*
     - netcdf-cxx4 4.3.*
