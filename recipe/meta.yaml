@@ -11,31 +11,31 @@ source:
   sha256: d435f21b6f74ba42669e390d43a3b6ab401ec3a9420e7fb13d7971a7a71c3c0e
 
 build:
-  number: 3
-  skip: true   # [win]
+  number: 4
+  skip: True   # [win]
 
 requirements:
   build:
     - cmake
     - boost 1.61.*
     - netcdf-cxx4 4.3.*
-    - toolchain
   run:
     - boost 1.61.*
     - netcdf-cxx4 4.3.*
 
 test:
   commands:
-    - test -d $PREFIX/include/radolan  # [unix]
+    - test -d $PREFIX/include/radolan  # [not win]
     - test -e $PREFIX/lib/libradolan.so  # [linux]
     - test -e $PREFIX/lib/libradolan.dylib  # [osx]
     - radolan2netcdf --version
     - radolan2netcdf --endianess
+    - conda inspect linkages -n _test libradolan  # [not win]
 
 about:
   home: http://meteo-ubonn.github.io/radolan/
   license: MIT
-  summary: C++ library for reading and working with the RADOLAN data format of the German Weather Service (DWD)
+  summary: 'C++ library for reading and working with the RADOLAN data format of the German Weather Service (DWD).'
 
 extra:
   recipe-maintainers:
