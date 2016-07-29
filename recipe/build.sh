@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
 if [ $(uname) == Darwin ]; then
-  export CXX="${CXX} -stdlib=libc++"
+  export CC=clang
+  export CXX=clang++
+  export MACOSX_DEPLOYMENT_TARGET="10.9"
+  export CXXFLAGS="-stdlib=libc++ $CXXFLAGS"
+  export CXXFLAGS="$CXXFLAGS -stdlib=libc++"
 fi
+
 
 
 mkdir build_libradolan && cd build_libradolan
