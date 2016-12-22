@@ -30,6 +30,8 @@ test:
     - test -e $PREFIX/lib/libradolan.dylib  # [osx]
     - radolan2netcdf --version
     - radolan2netcdf --endianess
+    - conda inspect linkages -p $PREFIX libradolan  # [not win]
+    - conda inspect objects -p $PREFIX libradolan  # [osx]
 
 about:
   home: http://meteo-ubonn.github.io/radolan/
